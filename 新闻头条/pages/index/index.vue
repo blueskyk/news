@@ -1,10 +1,14 @@
 <template>
 	<view class="content">
-		主页
+		<nav-bar></nav-bar>
+		<view v-for="item in 100">
+			{{item}} 测试内容
+		</view>
 	</view>
 </template>
 
 <script>
+	import navBar from "../../components/navBar.vue"
 	export default {
 		data() {
 			return {
@@ -16,6 +20,9 @@
 		},
 		methods: {
 
+		},
+		components: {
+			navBar
 		}
 	}
 </script>
