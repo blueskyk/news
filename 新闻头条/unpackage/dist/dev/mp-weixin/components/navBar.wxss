@@ -29,6 +29,10 @@
   top: 0;
   left: 0;
   z-index: 99;
+  width: 100%;
+  background-color: #f07373;
+}
+.navbar .navbar-fixed .navbar-content {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -40,11 +44,9 @@
           justify-content: center;
   box-sizing: border-box;
   padding: 0 30rpx;
-  width: 100%;
   height: 90rpx;
-  background-color: #f07373;
 }
-.navbar .navbar-fixed .navbar-search {
+.navbar .navbar-fixed .navbar-content .navbar-search {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -57,13 +59,13 @@
   background-color: #fff;
   border-radius: 60rpx;
 }
-.navbar .navbar-fixed .navbar-search .navbar-search_icon {
+.navbar .navbar-fixed .navbar-content .navbar-search .navbar-search_icon {
   width: 20rpx;
   height: 20rpx;
   border: 1rpx solid red;
   margin-right: 20rpx;
 }
-.navbar .navbar-fixed .navbar-search .navbar-search_text {
+.navbar .navbar-fixed .navbar-content .navbar-search .navbar-search_text {
   font-size: 24rpx;
   color: #999;
 }
