@@ -153,23 +153,12 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 var _default =
 {
   data: function data() {
-    return {
-      list: [
-      { name: "前端" },
-      { name: "后端" },
-      { name: "前端" },
-      { name: "前端" },
-      { name: "前端" },
-      { name: "前端" },
-      { name: "前端" },
-      { name: "前端" },
-      { name: "前端" },
-      { name: "前端" },
-      { name: "前端" },
-      { name: "前端" }] };
+    return {};
 
 
-  } };exports.default = _default;
+  },
+  props: {
+    list: Array } };exports.default = _default;
 
 /***/ }),
 

@@ -2,7 +2,7 @@
 	<view class="tab">
 		<scroll-view scroll-x class="tab-scroll">
 			<view class="tab-scroll_box">
-				<view class="tab-scroll_item" v-for="(item,index) in list" :key="index">{{item.name}}</view>
+				<view class="tab-scroll_item" v-for="item in list" :key="item._id">{{item.name}}</view>
 			</view>
 		</scroll-view>
 		<view class="tab-icons">
@@ -15,21 +15,11 @@
 	export default {
 		data() {
 			return {
-				list: [
-					{name: "前端"},
-					{name: "后端"},
-					{name: "前端"},
-					{name: "前端"},
-					{name: "前端"},
-					{name: "前端"},
-					{name: "前端"},
-					{name: "前端"},
-					{name: "前端"},
-					{name: "前端"},
-					{name: "前端"},
-					{name: "前端"}
-				]
+				
 			};
+		},
+		props: {
+			list: Array
 		}
 	}
 </script>
@@ -74,7 +64,7 @@
 			left: 0;
 			bottom: 0;
 			width: 1px;
-			background-color: pink;
+			background-color: #ddd;
 		}
 	}
 }

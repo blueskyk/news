@@ -156,7 +156,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var navBar = function navBar() {__webpack_require__.e(/*! require.ensure | components/navbar/navbar */ "components/navbar/navbar").then((function () {return resolve(__webpack_require__(/*! ../../components/navbar/navbar.vue */ 29));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var tab = function tab() {__webpack_require__.e(/*! require.ensure | components/tab/tab */ "components/tab/tab").then((function () {return resolve(__webpack_require__(/*! ../../components/tab/tab.vue */ 47));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uniCloud) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var navBar = function navBar() {__webpack_require__.e(/*! require.ensure | components/navbar/navbar */ "components/navbar/navbar").then((function () {return resolve(__webpack_require__(/*! ../../components/navbar/navbar.vue */ 29));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var tab = function tab() {__webpack_require__.e(/*! require.ensure | components/tab/tab */ "components/tab/tab").then((function () {return resolve(__webpack_require__(/*! ../../components/tab/tab.vue */ 47));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -168,19 +168,31 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 {
   data: function data() {
-    return {};
-
+    return {
+      tabList: [] };
 
   },
   onLoad: function onLoad() {
-
+    this.getLabel();
   },
-  methods: {},
+  methods: {
+    // 获取表单数据
+    getLabel: function getLabel() {var _this = this;
+      uniCloud.
+      callFunction({
+        name: 'get_label' }).
 
+      then(function (res) {var
+        result = res.result;
+        _this.tabList = result.data;
+        console.log(_this.tabList);
+      });
+    } },
 
   components: {
     navBar: navBar,
     tab: tab } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 55)["default"]))
 
 /***/ })
 ],[[11,"common/runtime","common/vendor"]]]);
