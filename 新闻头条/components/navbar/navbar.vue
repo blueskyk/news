@@ -4,7 +4,9 @@
 			<view :style="{height: statusBarHeight +'px'}"></view>
 			<view class="navbar-content" :style="{height: navBarHeight + 'px',width: windowWidth+'px'}">
 				<view class="navbar-search">
-					<view class="navbar-search_icon"></view>
+					<view class="navbar-search_icon">
+						<uni-icons type="search" size="16" color="#999"></uni-icons>
+					</view>
 					<view class="navbar-search_text">uniapp,vue</view>
 				</view>
 			</view>
@@ -64,9 +66,6 @@
 				background-color: #fff;
 				border-radius: 60rpx;
 				.navbar-search_icon {
-					width: 20rpx;
-					height: 20rpx;
-					border: 1rpx solid red;
 					margin-right: 20rpx;
 				}
 				.navbar-search_text {

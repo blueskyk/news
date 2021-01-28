@@ -133,7 +133,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var navBar = function navBar() {__webpack_require__.e(/*! require.ensure | components/navBar */ "components/navBar").then((function () {return resolve(__webpack_require__(/*! ../../components/navBar.vue */ 29));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var navBar = function navBar() {__webpack_require__.e(/*! require.ensure | components/navbar/navbar */ "components/navbar/navbar").then((function () {return resolve(__webpack_require__(/*! ../../components/navbar/navbar.vue */ 29));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 

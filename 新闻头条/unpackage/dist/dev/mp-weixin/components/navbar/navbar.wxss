@@ -60,9 +60,6 @@
   border-radius: 60rpx;
 }
 .navbar .navbar-fixed .navbar-content .navbar-search .navbar-search_icon {
-  width: 20rpx;
-  height: 20rpx;
-  border: 1rpx solid red;
   margin-right: 20rpx;
 }
 .navbar .navbar-fixed .navbar-content .navbar-search .navbar-search_text {
