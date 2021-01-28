@@ -98,6 +98,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components
+try {
+  components = {
+    tab: function() {
+      return __webpack_require__.e(/*! import() | components/tab/tab */ "components/tab/tab").then(__webpack_require__.bind(null, /*! @/components/tab/tab.vue */ 47))
+    }
+  }
+} catch (e) {
+  if (
+    e.message.indexOf("Cannot find module") !== -1 &&
+    e.message.indexOf(".vue") !== -1
+  ) {
+    console.error(e.message)
+    console.error("1. 排查组件名称拼写是否正确")
+    console.error(
+      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
+    )
+    console.error(
+      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
+    )
+  } else {
+    throw e
+  }
+}
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -133,8 +156,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var navBar = function navBar() {__webpack_require__.e(/*! require.ensure | components/navbar/navbar */ "components/navbar/navbar").then((function () {return resolve(__webpack_require__(/*! ../../components/navbar/navbar.vue */ 29));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
-
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var navBar = function navBar() {__webpack_require__.e(/*! require.ensure | components/navbar/navbar */ "components/navbar/navbar").then((function () {return resolve(__webpack_require__(/*! ../../components/navbar/navbar.vue */ 29));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var tab = function tab() {__webpack_require__.e(/*! require.ensure | components/tab/tab */ "components/tab/tab").then((function () {return resolve(__webpack_require__(/*! ../../components/tab/tab.vue */ 47));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -157,7 +179,8 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
   components: {
-    navBar: navBar } };exports.default = _default;
+    navBar: navBar,
+    tab: tab } };exports.default = _default;
 
 /***/ })
 ],[[11,"common/runtime","common/vendor"]]]);
