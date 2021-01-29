@@ -1,7 +1,7 @@
 <template>
 	<view class="content">
 		<nav-bar></nav-bar>
-		<tab :list="tabList"></tab>
+		<tab :list="tabList" @tab="tab"></tab>
 	</view>
 </template>
 
@@ -25,7 +25,11 @@ export default {
 			}).then((res) => {
 				this.tabList = res.data
 			})
+		},
+		tab(data,index) {
+			console.log(data,index)
 		}
+		
 	},
 	components: {
 		navBar,
