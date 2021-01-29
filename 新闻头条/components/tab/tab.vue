@@ -19,7 +19,10 @@
 			};
 		},
 		props: {
-			list: Array
+			list: Array,
+			default() {
+				return []
+			}
 		}
 	}
 </script>

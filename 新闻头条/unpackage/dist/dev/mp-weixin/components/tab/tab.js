@@ -150,7 +150,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
-var _default =
+var _default2 =
 {
   data: function data() {
     return {};
@@ -158,7 +158,10 @@ var _default =
 
   },
   props: {
-    list: Array } };exports.default = _default;
+    list: Array,
+    default: function _default() {
+      return [];
+    } } };exports.default = _default2;
 
 /***/ }),
 
