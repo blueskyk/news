@@ -1,6 +1,37 @@
 <template>
 	<view>
-		<view class="listcard">
+		<!-- 基础卡片 -->
+		<view v-if="mode === 'base'" class="listcard">
+			<view class="listcard-image"><image src="../../static/tabbar/logo.png" mode="aspectFill"></image></view>
+			<view class="listcard-content">
+				<view class="listcard-content_title">
+					<text>uni-app框架uni-app框架uni-app框架uni-app框架uni-app框架uni-app框架uni-app框架uni-app框架uni-app框架uni-app框架</text>
+				</view>
+				<view class="listcard-content_des">
+					<view class="listcard-content_des-label"><view class="listcard-content_des-label-item">前端</view></view>
+					<view class="listcard-content_des-browse">1100浏览</view>
+				</view>
+			</view>
+		</view>
+
+		<!-- 多图模式 -->
+		<view v-if="mode === 'column'" class="listcard mode-column">
+			<view class="listcard-content">
+				<view class="listcard-content_title">
+					<text>uni-app框架uni-app框架uni-app框架uni-app框架uni-app框架uni-app框架uni-app框架uni-app框架uni-app框架uni-app框架</text>
+					<view class="listcard-image">
+						<view v-for="item in 4" class="listcard-item_image"><image src="../../static/tabbar/logo.png" mode="aspectFill"></image></view>
+					</view>
+				</view>
+				<view class="listcard-content_des">
+					<view class="listcard-content_des-label"><view class="listcard-content_des-label-item">前端</view></view>
+					<view class="listcard-content_des-browse">1100浏览</view>
+				</view>
+			</view>
+		</view>
+
+		<!-- 大图模式 -->
+		<view v-if="mode == 'image'" class="listcard mode-image">
 			<view class="listcard-image"><image src="../../static/tabbar/logo.png" mode="aspectFill"></image></view>
 			<view class="listcard-content">
 				<view class="listcard-content_title">
@@ -19,11 +50,17 @@
 export default {
 	data() {
 		return {};
+	},
+	props: {
+		mode: {
+			type: String,
+			default: 'base'
+		}
 	}
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .listcard {
 	display: flex;
 	align-items: center;
@@ -77,8 +114,44 @@ export default {
 					border-radius: 30rpx;
 					border: 1rpx solid $base-color;
 					color: $base-color;
-				} 
+				}
 			}
+		}
+	}
+	&.mode-column {
+		.listcard-content {
+			width: 100%;
+			margin-left: 0;
+		}
+		.listcard-image {
+			display: flex;
+			width: 100%;
+			height: 140rpx;
+			margin-top: 20rpx;
+			.listcard-item_image {
+				margin-left: 20rpx;
+				width: 100%;
+				border-radius: 10rpx;
+				overflow: hidden;
+				&:first-child {
+					margin-left: 0rpx;
+				}
+				image {
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+	&.mode-image {
+		display: flex;
+		flex-direction: column;
+		.listcard-image {
+			width: 100%;
+			height: 200rpx;
+		}
+		.listcard-content {
+			margin-top: 20rpx;
 		}
 	}
 }
