@@ -3,6 +3,8 @@
   "navigationBarTitleText": "uni-app",
   "usingComponents": {
     "tab": "/components/tab/tab",
+    "list-scroll": "/components/list-scroll/list-scroll",
+    "list-card": "/components/list-card/list-card",
     "nav-bar": "/components/navbar/navbar"
   }
 }

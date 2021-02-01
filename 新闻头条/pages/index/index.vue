@@ -1,13 +1,18 @@
 <template>
-	<view class="content">
+	<view class="home">
 		<nav-bar></nav-bar>
 		<tab :list="tabList" @tab="tab"></tab>
+		<list-scroll>
+			<list-card v-for="item in 5"></list-card>
+		</list-scroll>
 	</view>
 </template>
 
 <script>
 import navBar from '../../components/navbar/navbar.vue';
 import tab from '../../components/tab/tab.vue';
+import listScroll from "../../components/list-scroll/list-scroll.vue"
+import listCard from "../../components/list-card/list-card.vue"
 export default {
 	data() {
 		return {
@@ -20,22 +25,36 @@ export default {
 	methods: {
 		// 获取表单数据
 		getLabel() {
-			this.$api.get_label({
-				name: 'get_label'
-			}).then((res) => {
-				this.tabList = res.data
-			})
+			this.$api
+				.get_label({
+					name: 'get_label'
+				})
+				.then(res => {
+					this.tabList = res.data;
+				});
 		},
-		tab(data,index) {
-			console.log(data,index)
+		tab(data, index) {
+			console.log(data, index);
 		}
-		
 	},
 	components: {
 		navBar,
-		tab
+		tab,
+		listScroll,
+		listCard
 	}
 };
 </script>
 
-<style></style>
+<style lang="scss">
+page {
+	display: flex;
+	height: 100%;
+}
+.home {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	border: 1rpx solid red;
+}
+</style>
